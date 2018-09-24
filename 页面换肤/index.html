@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>页面换肤</title>
+		<style>
+			fieldset{
+				width: 600px;
+			}
+			legend{
+				color: red;
+				font-size:30px;
+				font-weight:bold;
+				}
+			span{
+				height: 20px;
+				width: 20px;
+				float: left;
+				margin-left: 10px;
+				margin-top: 10px;
+				}
+			#col{
+				height: 40px;
+				width: 600px;
+				border:1px solid gray;
+				margin: 10px;
+				}
+			#text{
+				height: 100px;
+				width: 600px;
+				margin: 10px;
+			}
+			#color1{background-color: #A9A9A9;}
+			#color2{background-color: #9400D3;}
+			#color3{background-color: #FF0000;}
+			#color4{background-color: #00FFFF;}
+			#color5{background-color: #FF8C00;}
+			#color6{background-color: #7FFF00;}
+</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>页面换肤</legend>
+			<div id="col">
+				<span id="color1"></span>
+				<span id="color2"></span>
+				<span id="color3"></span>
+				<span id="color4"></span>
+				<span id="color5"></span>
+				<span id="color6"></span>
+			</div>
+			<div id="text">
+				LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，在下次打开浏览器访问网站时仍然可以继续使用。
+			</div>
+		</fieldset>
+	</body>
+	<script>
+		var color;
+		var txt=document.getElementById("text");
+		var span1=document.getElementById("color1");
+		var span2=document.getElementById("color2");
+		var span3=document.getElementById("color3");
+		var span4=document.getElementById("color4");
+		var span5=document.getElementById("color5");
+		var span6=document.getElementById("color6");
+		
+		window.onload=function(){
+			if(localStorage.length==0){
+				localStorage.setItem("red","red");
+				txt.style.backgroundColor=localStorage.getItem("red");
+				ttop();
+				span1.style.marginTop="5px";
+			}else{
+				txt.style.backgroundColor=localStorage.getItem(localStorage.key(0));
+			}
+		}
+		
+		
+		
+		function ttop(){
+			span1.style.marginTop="10px";
+			span2.style.marginTop="10px";
+			span3.style.marginTop="10px";
+			span4.style.marginTop="10px";
+			span5.style.marginTop="10px";
+			span6.style.marginTop="10px";
+		}
+			
+		span1.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#A9A9A9","#A9A9A9");
+			txt.style.backgroundColor=localStorage.getItem("#A9A9A9");
+			ttop();
+			span1.style.marginTop="5px";
+		}
+		span2.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#9400D3","#9400D3");
+			txt.style.backgroundColor=localStorage.getItem("#9400D3");
+			ttop();
+			span2.style.marginTop="5px";
+		}
+		span3.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#FF0000","#FF0000");
+			txt.style.backgroundColor=localStorage.getItem("#FF0000");
+			ttop();
+			span3.style.marginTop="5px";
+		}
+		span4.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#00FFFF","#00FFFF");
+			txt.style.backgroundColor=localStorage.getItem("#00FFFF");
+			ttop();
+			span4.style.marginTop="5px";
+		}
+		span5.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#FF8C00","#FF8C00");
+			txt.style.backgroundColor=localStorage.getItem("#FF8C00");
+			ttop();
+			span5.style.marginTop="5px";
+		}
+		span6.onclick=function(){
+			localStorage.clear();
+			localStorage.setItem("#7FFF00","#7FFF00");
+			txt.style.backgroundColor=localStorage.getItem("#7FFF00");
+			ttop();
+			span6.style.marginTop="5px";
+		}
+		console.log(color);
+	</script>
+</html>
