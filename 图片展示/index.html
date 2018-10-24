@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>中V人物图片展示</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;	
+			}
+			#box{
+				margin: auto;
+				width: 1500px;
+				height: 844px;
+				background:url(img/back.jpg);
+				background-repeat:repeat;
+			} 
+			#box div{
+				width:180px;
+				height: 190px;
+				border: 2px solid white;
+				background:rgba(245,222,179,0.8);
+				box-shadow: -3px -3px 1px 1px lightgoldenrodyellow;
+				border-radius: 20px;
+				display:inline-block;
+				margin-top: 30px;
+				margin-left: 50px;
+				cursor:;
+			}
+			p{
+				text-align: center;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				color: #666;
+			}
+			img{
+				margin-top:10px;
+				margin-left: 15px;
+				border-radius: 10px;
+			}
+			#mo{transform: rotate(-10deg);}
+			#mo:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+				
+			#yan{transform: rotate(20deg);}
+			#yan:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+			
+			#luo{transform: rotate(7deg);}
+			#luo:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+			
+			#yue{transform: rotate(-15deg);}
+			#yue:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+			
+			#long{transform: rotate(-5deg);}
+			#long:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+			
+			#xing{transform: rotate(13deg);}
+			#xing:hover{transform: rotate(0deg);transform: scale(1.2,1.2);}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="mo">
+				<img src="img/mo.jpg"/>
+				<p>墨清弦</p>
+			</div>
+			<div id="yan">
+				<img src="img/yanhe.jpg"/>
+				<p>言和</p>
+			</div>
+			<div id="luo">
+				<img src="img/tianyi.jpg"/>
+				<p>洛天依</p>
+			</div>
+			<div id="yue">
+				<img src="img/ling.jpg"/>
+				<p>乐正绫</p>
+			</div>
+			<div id="long">
+				<img src="img/longya.jpg"/>
+				<p>乐正龙牙</p>
+			</div>
+			<div id="xing">
+				<img src="img/xingchen.jpg"/>
+				<p>星尘</p>
+			</div>		
+		</div>
+	</body>
+</html>
